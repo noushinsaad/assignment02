@@ -29,8 +29,7 @@
 /* shared styles */
 .bg-dark {
     /* background-color: black; */
-    background: linear-gradient(180deg, rgb(17, 17, 17),
-            rgba(119, 119, 119, 0) 100%), rgb(37, 36, 36);
+    background:black;
 }
 
 
@@ -40,7 +39,7 @@
 
 .container {
     width: 90%;
-    margin: 2rem auto;
+    margin: 0 auto;
     /* border-radius: 1rem; */
 }
 
@@ -60,7 +59,7 @@
     font-size: 3rem;
     font-weight: 900;
     line-height: 120%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .section-des {
@@ -69,12 +68,18 @@
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.3px;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* header styles */
-
+.header{
+    background: linear-gradient(180.00deg, rgb(17, 17, 17),
+     rgba(119, 119, 119, 0) 100%),#0a0a0a;
+    /* width: 90%; */
+     padding: 2rem 5rem;
+}
 
 /* navbar related styles */
 
@@ -106,6 +111,9 @@
     padding: 0.5rem;
 }
 
+.bar-icon{
+    display: none;
+}
 
 .brand {
     color: var(--color3);
@@ -231,12 +239,12 @@
 }
 
 /* change habits related styles */
-.change-habits {
+/* .change-habits {
     margin-top: 4rem;
-}
+} */
 
 .change-habits-content {
-    margin: 2rem auto;
+    margin: 0 auto;
 }
 
 .card-container {
@@ -275,12 +283,42 @@
     text-align: center;
 }
 
+/* run extra mile styles */
+.run-extra-mile{
+    margin-top: 4rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    background-color: rgb(34, 34, 34);
+    padding: 2rem;
+    margin-bottom: 4rem;
+}
 
+.run-extra-mile-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.image-container img{
+    width: 100%;
+    border-radius: 1rem;
+}
 
 /* small device styles */
 @media screen and (max-width: 576px) {
+    .header{
+        padding: 32px 15px 0px 10px;
+    }
+
     .nav-links {
         display: none;
+    }
+
+    .bar-icon{
+        display: block;
     }
 
     .banner {
@@ -292,13 +330,13 @@
     }
 
     .video300 {
-        top: 50%;
+        top: 55%;
         right: 55%;
     }
 
     .video500 {
-        top: 10%;
-        right: 2%;
+        top: 20%;
+        right: 5%;
     }
 
     .section-title{
@@ -306,11 +344,16 @@
     }
 
     .change-habits {
-        margin-top: 0;
+        /* margin-top: 0px; */
     }
 
     .card-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .run-extra-mile{
+        grid-template-columns: 1fr;
+        padding: 2rem 0.5rem;
     }
 }
 
