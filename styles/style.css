@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/miama');
+
+:root {
+    --color1: #ffffff;
+    --color2: #ffffff80;
+    --color3: #e6533c;
+}
+
+
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+}
+
+.miama-font {
+    font-family: 'Miama', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* shared styles */
+.bg-dark {
+    /* background-color: black; */
+    background: linear-gradient(180deg, rgb(17, 17, 17),
+            rgba(119, 119, 119, 0) 100%), rgb(37, 36, 36);
+}
+
+
+.display-flex {
+    display: flex;
+}
+
+.container {
+    width: 90%;
+    margin: 2rem auto;
+    /* border-radius: 1rem; */
+}
+
+.btn-primary {
+    background-color: var(--color3);
+    border-radius: 2rem;
+    padding: 16px 40px;
+    border: none;
+    color: var(--color1);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* header styles */
+
+
+/* navbar related styles */
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    border: 1px solid #ffffff1a;
+    border-radius: 2rem;
+    justify-content: space-evenly;
+    gap: 4rem;
+    padding: 0.5rem;
+    /* justify-content: space-evenly; */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color1);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.nav-item {
+    list-style: none;
+    width: 5rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+
+.brand {
+    color: var(--color3);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 120%;
+    font-style: italic;
+    letter-spacing: 0%;
+}
+
+.home {
+    background-color: var(--color3);
+    border-radius: 2rem;
+}
+
+.home>a {
+    color: var(--color1);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+
+/* banner styles */
+.banner {
+    margin-top: 6rem;
+    gap: 10.5rem;
+}
+
+
+.banner-title {
+    color: var(--color1);
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 120%;
+    margin-bottom: 1.5rem;
+}
+
+.banner-des {
+    color: var(--color2);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+}
+
+
+.download-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 16px 40px;
+    color: var(--color1);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.banner-img {
+    position: relative;
+}
+
+
+.banner-img img {
+    width: 100%;
+    /* height: 100%; */
+}
+
+
+.video300 {
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: #3030308a;
+    opacity: blur(20px);
+    position: absolute;
+    top: 70%;
+    right: 70%;
+}
+
+#dot {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--color3);
+}
+
+
+.video500 {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    opacity: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 20%;
+    right: -15%;
+}
+
+.video500>h3,
+.video300-content>h3 {
+    color: var(--color1);
+    /* font-family: Inter; */
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 40px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.video300-content>p,
+.video500>p {
+    color: rgba(255, 255, 255, 0.65);
+    /* font-family: Inter; */
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+/* small device styles */
+@media screen and (max-width: 576px) {
+    .nav-links {
+        display: none;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .banner-title {
+        font-size: 2.25rem;
+    }
+
+    .video300 {
+        top: 50%;
+        right: 55%;
+    }
+
+    .video500 {
+        top: 10%;
+        right: 2%;
+    }
+}
+
+/* medium device styles */
+@media screen and (min-width:577px) and (max-width:992px) {
+    .banner {
+        flex-direction: column;
+    }
+
+    .video300 {
+        top: 70%;
+        right: 75%;
+    }
+
+    .video500 {
+        top: 20%;
+        right: 15%;
+    }
+}
